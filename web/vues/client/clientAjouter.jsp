@@ -61,7 +61,8 @@
        <a type="button" class="btn btn-outline-success" href="../connexion.html">Connexion </a>
        
       </ul>
-</nav>
+    </form>
+    </nav>
          <div class="container">
         <h1>Nouveau client</h1>
         
@@ -70,7 +71,7 @@
                 ClientForm form = (ClientForm)request.getAttribute("form");
             %>
            
-        <form class="form-group" action="ajouterClient" method="POST">
+            <form class="form-group" action="ajouterClient" method="POST">
                 <label for="nom">NOM : </label>
                 <input class="form-control" id="nom" type="text" name="nom"  size="30" maxlength="30">
                 </br>
@@ -99,7 +100,6 @@
                 <%-- Champ Liste des pays --%>
                 <label for="pays">Pays : </label>
                 <select class="form-control" id="codePays" name ="pays">
-s
                     <%
                         ArrayList<Pays> lesPays = (ArrayList)request.getAttribute("pLesPays");
                         for (int i=0; i<lesPays.size();i++){
@@ -122,25 +122,9 @@ s
                             out.println("</label></br>");
                         }
                     %>
-                    <!-- </select></br> -->
-                   
-               
-               
-                
-                <%-- Cases à cocher permettant de choisir les différentes catégories de vente auxquelles le client souhaite s'inscrire 
-                <label for="categVente">Categories de vente : </label></br>
-                 <%
-                        ArrayList<CategVente> lesCategVente = (ArrayList)request.getAttribute("pLesCategVente");
-                        for (int i=0; i<lesCategVente.size();i++){
-                            CategVente cv = lesCategVente.get(i);
-                            
-                        }
-                    %>
-                    </br>
-                    --%>
                  
                     </br>    
-            <input class="btn btn-primary" type="Submit" name="valider" id="valider" value="Valider">
+                    <button class="btn btn-primary" type="submit" name="valider" id="valider" value="Valider">Valider</button> 
             </form>
          </div>
     </body>

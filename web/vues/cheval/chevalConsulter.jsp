@@ -74,9 +74,11 @@
         <p>
             Son numéro d'identification (Sire) est le <%  out.println(unCheval.getNumSire());%>
         </p>
+        <%--
         <p>
             C'est un <%  out.println(unCheval.getSexe());%> de race <% out.println(unCheval.getUnTypeCheval().getLibelle());%>
         </p>
+        --%>
     </center>
     </body>
 </html>

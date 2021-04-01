@@ -53,10 +53,10 @@ public class ServletClient extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        //response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
+            /*out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ServletClient</title>");            
@@ -64,7 +64,7 @@ public class ServletClient extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet ServletClient at " + request.getContextPath() + "</h1>");
             out.println("</body>");
-            out.println("</html>");
+            out.println("</html>");*/
         }
     }
 
@@ -83,14 +83,17 @@ public class ServletClient extends HttpServlet {
        
         
        String url = request.getRequestURI();
+      
        
        if(url.equals("/Orion/ServletClient/ajouterClient"))
         {                   
+            System.out.println("do get"  + url);
             ArrayList<Pays> lesPays = PaysDAO.getLesPays(connection);
             request.setAttribute("pLesPays", lesPays);
             
             ArrayList<CategVente> lesCategVentes = CategVenteDAO.getLesCategVentes(connection);
             request.setAttribute("pLesCategVente", lesCategVentes);
+            
             this.getServletContext().getRequestDispatcher("/vues/client/clientAjouter.jsp" ).forward( request, response );
         }
     }
@@ -107,7 +110,9 @@ public class ServletClient extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
                
-         /* Préparation de l'objet formulaire */
+        System.out.println("do post");
+        
+        /* Préparation de l'objet formulaire */
         ClientForm form = new ClientForm();
 		
         /* Appel au traitement et à la validation de la requête, et récupération du bean en résultant */

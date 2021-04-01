@@ -48,7 +48,7 @@
         </div>
       </li>
     </ul>
-<<<<<<< HEAD:web/vues/cheval/chevalModifier.jsp
+
    <form class="form-inline my-2 my-lg-0">
       <ul class="form-inline my-2 my-lg-0">
        <a type="button" class="btn btn-outline-primary" href="../inscription.html">S'inscrire </a> &nbsp;
@@ -56,13 +56,11 @@
        
       </ul>
 </nav>
-        <h1>Infos cheval</h1>
         
-=======
+
     
   </div>
-</nav></br>        
->>>>>>> 588f0dafde26b2924ef1c59630f354c965e77251:web/vues/pays/paysConsulter.jsp
+</nav></br>
          <%
         Pays unPays = (Pays)request.getAttribute("pPays");
         %>
@@ -78,8 +76,6 @@
             <tr><td>Cheval pere :</td><td><%  out.println(unCheval.getUnChevalPere().getNom());%></td></tr>
             <tr><td>Cheval mere :</td><td><%  out.println(unCheval.getUnChevalMere().getNom());%></td></tr>
         </table>
-<<<<<<< HEAD:web/vues/cheval/chevalModifier.jsp
-=======
         --%>
     
     <center>
@@ -88,7 +84,6 @@
            Le pays <%  out.println(unPays.getNom());%> a été ajouter Sous le code <%  out.println(unPays.getCode());%>
         </p>
     </center>
->>>>>>> 588f0dafde26b2924ef1c59630f354c965e77251:web/vues/pays/paysConsulter.jsp
     </body>
 </html>
 

@@ -57,6 +57,7 @@
        <a type="button" class="btn btn-outline-success" href="../connexion.html">Connexion </a>
        
       </ul>
+      </form>
 </nav>
         
         <div class="container">

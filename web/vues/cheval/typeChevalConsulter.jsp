@@ -48,7 +48,7 @@
         </div>
       </li>
     </ul>
-<<<<<<< HEAD:web/vues/cheval/chevalSupprimer.jsp
+
     <form class="form-inline my-2 my-lg-0">
       <ul class="form-inline my-2 my-lg-0">
        <a type="button" class="btn btn-outline-primary" href="../inscription.html">S'inscrire </a> &nbsp;
@@ -56,8 +56,8 @@
        
       </ul>
 </nav>
-        <h1>Hello World!</h1>
-=======
+
+
     
   </div>
 </nav></br>        
@@ -74,13 +74,13 @@
         --%>
     
     <center>
-        <h1>Ajoute d'une race de cheval</h1>
+        <h1>Information d'ajout</h1>
         <p>
            Le type <%  out.println(unTypeCheval.getLibelle());%> a été ajouter !
            Sa description <%  out.println(unTypeCheval.getDescription());%>
         </p>
     </center>
->>>>>>> 588f0dafde26b2924ef1c59630f354c965e77251:web/vues/cheval/typeChevalConsulter.jsp
+
     </body>
 </html>
 
